@@ -15,14 +15,19 @@ spec:
     uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-linux-amd64.tar.gz
     sha256: "d855965ca0b726b095ea7e4de6243a7a81767818e63bc5bb45a09446d59bad03"
     bin: "kubectl-safe"
+    
   - selector: { matchLabels: { os: darwin, arch: amd64 } }
     uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-darwin-amd64.tar.gz
-    sha256: "23559f31b7fa02a3b24a81cb6ac6c0b3bc5f25cb60f360a64790bd30bc590cbc"
-    bin: "kubectl-safe"
-  - selector: { matchLabels: { os: darwin, arch: arm64 } }
-    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-darwin-arm64.tar.gz
+    # CORRECTED CHECKSUM FOR INTEL MACS
     sha256: "8e7b179e89d3e087944e1d6513ff3de402e8ffc552fc7f341913210398c60e9c"
     bin: "kubectl-safe"
+    
+  - selector: { matchLabels: { os: darwin, arch: arm64 } }
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-darwin-arm64.tar.gz
+    # CORRECTED CHECKSUM FOR APPLE SILICON MACS (YOURS)
+    sha256: "23559f31b7fa02a3b24a81cb6ac6c0b3bc5f25cb60f360a64790bd30bc590cbc"
+    bin: "kubectl-safe"
+    
   - selector: { matchLabels: { os: windows, arch: amd64 } }
     uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-windows-amd64.zip
     sha256: "ef3ac36f9d471556bd6f4cfd10b987f66b35756f9f116b579e30c2fda4d3e19e"
