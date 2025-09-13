@@ -3,7 +3,7 @@ kind: Plugin
 metadata:
   name: safe
 spec:
-  version: "v0.1.99"
+  version: "v0.2.1"
   shortDescription: "Provides a safety wrapper for dangerous commands."
   description: |
     This plugin acts as a safety gate for commands like apply, delete,
@@ -12,22 +12,18 @@ spec:
   homepage: https://github.com/bjrooney/kubectl-safe
   platforms:
   - selector: { matchLabels: { os: linux, arch: amd64 } }
-    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.0/kubectl-safe-linux-amd64
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-linux-amd64.tar.gz
     sha256: "705f336ff6420b069b5b5af1e400422266b3fa67e3bcd48bae84c4fedcc0eec1"
-    bin: "kubectl-safe-linux-amd64"
-
+    bin: "kubectl-safe"
   - selector: { matchLabels: { os: darwin, arch: amd64 } }
-    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.0/kubectl-safe-darwin-amd64
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-darwin-amd64.tar.gz
     sha256: "e00061b93b5e4a0e5d2014c82fec9c91850c4ffc023de560eb72e59150cace19"
-    bin: "kubectl-safe-darwin-amd64"
-
-  # This is the new section for your M2 Mac (Apple Silicon)
+    bin: "kubectl-safe"
   - selector: { matchLabels: { os: darwin, arch: arm64 } }
-    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.0/kubectl-safe-darwin-arm64
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-darwin-arm64.tar.gz
     sha256: "db781d3f622e33c64e4a55a4fdded27584f0fcdae93171a48282f2c56b98ee50"
-    bin: "kubectl-safe-darwin-arm64"
-
+    bin: "kubectl-safe"
   - selector: { matchLabels: { os: windows, arch: amd64 } }
-    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.0/kubectl-safe-windows-amd64.exe
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.2.1/kubectl-safe-windows-amd64.zip
     sha256: "c967d12910be1dae23ffa84cea38740eec270aca6605ae4b45ff2b5f78184beb"
-    bin: "kubectl-safe-windows-amd64.exe"
+    bin: "kubectl-safe.exe"
