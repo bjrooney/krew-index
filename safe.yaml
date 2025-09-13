@@ -1,0 +1,31 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: safe
+spec:
+  version: "v0.1.99" # Updated to your latest tag
+  shortDescription: "Provides a safety wrapper for dangerous commands."
+  description: |
+    This plugin acts as a safety gate for commands like apply, delete,
+    etc. It enforces that --context and --namespace are always provided
+    and adds confirmation prompts before execution.
+  homepage: https://github.com/bjrooney/kubectl-safe
+  platforms:
+  - selector: { matchLabels: { os: linux, arch: amd64 } }
+    # Updated URI to point to the v0.1.99 release asset
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.1.99/kubectl-safe-linux
+    # You must calculate this checksum yourself!
+    sha256: "705f336ff6420b069b5b5af1e400422266b3fa67e3bcd48bae84c4fedcc0eec1"
+    bin: "kubectl-safe-linux"
+  - selector: { matchLabels: { os: darwin, arch: amd64 } }
+    # Updated URI to point to the v0.1.99 release asset
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.1.99/kubectl-safe-darwin
+    # You must calculate this checksum yourself!
+    sha256: "e00061b93b5e4a0e5d2014c82fec9c91850c4ffc023de560eb72e59150cace19"
+    bin: "kubectl-safe-darwin"
+  - selector: { matchLabels: { os: windows, arch: amd64 } }
+    # Updated URI to point to the v0.1.99 release asset
+    uri: https://github.com/bjrooney/kubectl-safe/releases/download/v0.1.99/kubectl-safe-windows.exe
+    # You must calculate this checksum yourself!
+    sha256: "c967d12910be1dae23ffa84cea38740eec270aca6605ae4b45ff2b5f78184beb"
+    bin: "kubectl-safe-windows.exe"
