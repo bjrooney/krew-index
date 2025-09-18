@@ -1,5 +1,4 @@
-apiVersion: krew.googlecode.com/v1alpha2
-kind: Plugin
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
 metadata:
   name: safe
 spec:
